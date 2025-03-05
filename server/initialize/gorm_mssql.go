@@ -6,7 +6,7 @@ package initialize
  * @LastEditors: 逆光飞翔 191180776@qq.com
  * @LastEditTime: 2022-12-08 18:00:00
  * @FilePath: \server\initialize\gorm_mssql.go
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: 这是默认设置,请设置`customMade`, 打开4096koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 
 import (
@@ -26,7 +26,7 @@ func GormMssql() *gorm.DB {
 	}
 	mssqlConfig := sqlserver.Config{
 		DSN:               m.Dsn(), // DSN data source name
-		DefaultStringSize: 191,     // string 类型字段的默认长度
+		DefaultStringSize: 512,     // string 类型字段的默认长度
 	}
 	if db, err := gorm.Open(sqlserver.New(mssqlConfig), internal.Gorm.Config(m.Prefix, m.Singular)); err != nil {
 		return nil
@@ -46,7 +46,7 @@ func GormMssqlByConfig(m config.Mssql) *gorm.DB {
 	}
 	mssqlConfig := sqlserver.Config{
 		DSN:               m.Dsn(), // DSN data source name
-		DefaultStringSize: 191,     // string 类型字段的默认长度
+		DefaultStringSize: 512,     // string 类型字段的默认长度
 	}
 	if db, err := gorm.Open(sqlserver.New(mssqlConfig), internal.Gorm.Config(m.Prefix, m.Singular)); err != nil {
 		panic(err)

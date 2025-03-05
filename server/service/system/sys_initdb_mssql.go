@@ -53,7 +53,7 @@ func (h MssqlInitHandler) EnsureDB(ctx context.Context, conf *request.InitDB) (n
 
 	mssqlConfig := sqlserver.Config{
 		DSN:               dsn, // DSN data source name
-		DefaultStringSize: 191, // string 类型字段的默认长度
+		DefaultStringSize: 512, // string 类型字段的默认长度
 	}
 
 	var db *gorm.DB

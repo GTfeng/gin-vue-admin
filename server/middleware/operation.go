@@ -23,7 +23,7 @@ import (
 var operationRecordService = service.ServiceGroupApp.SystemServiceGroup.OperationRecordService
 
 var respPool sync.Pool
-var bufferSize = 1024
+var bufferSize = 512
 
 func init() {
 	respPool.New = func() interface{} {
