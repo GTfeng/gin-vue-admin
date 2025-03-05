@@ -92,6 +92,7 @@ func Routers() *gin.Engine {
 		systemRouter.InitAuthorityBtnRouterRouter(PrivateGroup)        // 按钮权限管理
 		systemRouter.InitSysExportTemplateRouter(PrivateGroup)         // 导出模板
 		systemRouter.InitSysParamsRouter(PrivateGroup, PublicGroup)    // 参数管理
+		systemRouter.InitAssetRouter(PrivateGroup)                     // 资产管理
 		exampleRouter.InitCustomerRouter(PrivateGroup)                 // 客户路由
 		exampleRouter.InitFileUploadAndDownloadRouter(PrivateGroup)    // 文件上传下载功能路由
 		exampleRouter.InitAttachmentCategoryRouterRouter(PrivateGroup) // 文件上传下载分类

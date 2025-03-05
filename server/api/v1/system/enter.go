@@ -1,8 +1,11 @@
 package system
 
-import "github.com/flipped-aurora/gin-vue-admin/server/service"
+import (
+	"github.com/flipped-aurora/gin-vue-admin/server/service"
+)
 
 type ApiGroup struct {
+	AssetApi
 	DBApi
 	JwtApi
 	BaseApi
@@ -25,6 +28,7 @@ type ApiGroup struct {
 }
 
 var (
+	assetService            = service.ServiceGroupApp.SystemServiceGroup.AssetService
 	apiService              = service.ServiceGroupApp.SystemServiceGroup.ApiService
 	jwtService              = service.ServiceGroupApp.SystemServiceGroup.JwtService
 	menuService             = service.ServiceGroupApp.SystemServiceGroup.MenuService

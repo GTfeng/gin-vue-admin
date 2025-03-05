@@ -3,6 +3,7 @@ package system
 import api "github.com/flipped-aurora/gin-vue-admin/server/api/v1"
 
 type RouterGroup struct {
+	AssetRouter
 	ApiRouter
 	JwtRouter
 	SysRouter
@@ -22,6 +23,7 @@ type RouterGroup struct {
 }
 
 var (
+	assetApi            = api.ApiGroupApp.SystemApiGroup.AssetApi
 	dbApi               = api.ApiGroupApp.SystemApiGroup.DBApi
 	jwtApi              = api.ApiGroupApp.SystemApiGroup.JwtApi
 	baseApi             = api.ApiGroupApp.SystemApiGroup.BaseApi

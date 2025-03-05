@@ -52,3 +52,16 @@
 | `--timer` | timer | 定时器接口封装 |
 | `--upload`      | oss                  | oss接口封装        |
 
+#### 部署
+
+> 打包
+>
+> ```shell
+> go build -tags netgo -ldflags '-s -w' -o app
+> ```
+
+> 运行
+>
+> ```shell
+> ./app
+> ```
