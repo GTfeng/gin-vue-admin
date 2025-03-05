@@ -340,7 +340,7 @@ getTableData()
 
 // 获取需要的字典 可能为空 按需保留
 const setOptions = async () =>{
-    stringOptions.value = await getDictFunc('string')
+    stringOptions.value = await getDictFunc('vulType')
 }
 
 // 获取需要的字典 可能为空 按需保留
